@@ -18,10 +18,25 @@ program
   .action((dir = process.cwd(), opts) => {
     const rootDir = path.resolve(dir);
     const pagesDir = path.join(rootDir, '/pages');
-    const generatedJs = path.join(pagesDir, 'generated.js');
+    const packageJson = path.join(rootDir, 'package.json');
+    const indexJs = path.join(pagesDir, 'index.js');
     console.log('making dir', pagesDir, process.env.DIAM_KEY);
     mkdirp.sync(pagesDir);
-    fs.writeFileSync(generatedJs, `
+    console.log('writing pkg', packageJson);
+    fs.writeFileSync(packageJson, `{
+  "dependencies": {
+    "next": "^9.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "yarn && next build",
+    "start": "next start"
+  }
+}
+`);
+    fs.writeFileSync(indexJs, `
 export default function Diamond() {
   return (
     <>
