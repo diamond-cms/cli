@@ -24,11 +24,13 @@ program
     fs.writeFileSync(generatedJs, `
 export default function Diamond() {
   return (
-    <h1>We have generated this!</h1>
-    <h2>Key: ${process.env.DIAM_KEY}</h2>
-    <p>
-      ${process.env.DIAM_KEY ? `We have a compiled system!` : 'Onboarding, please give us a key!'}
-    </p>
+    <>
+      <h1>We have generated this!</h1>
+      <h2>Key: ${process.env.DIAM_KEY}</h2>
+      <p>
+        ${process.env.DIAM_KEY ? `We have a compiled system!` : 'Onboarding, please give us a key!'}
+      </p>
+    </>
   )
 }
 `);
