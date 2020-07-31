@@ -1,0 +1,33 @@
+{
+  "name": "@diam/cli",
+  "version": "1.0.0",
+  "description": "Diamond CMS CLI for setting up and installing the CMS server and keeping it up to date.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "diamond": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diamond-cms/cms-cli.git"
+  },
+  "keywords": [
+    "diamond",
+    "cms",
+    "headless",
+    "wordpress",
+    "database",
+    "updater"
+  ],
+  "author": "Diamond Inc. <ops@diamond.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diamond-cms/cms-cli/issues"
+  },
+  "homepage": "https://github.com/diamond-cms/cms-cli#readme",
+  "devDependencies": {
+    "commander": "^6.0.0"
+  }
+}
