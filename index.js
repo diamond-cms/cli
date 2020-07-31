@@ -19,12 +19,16 @@ program
     const rootDir = path.resolve(dir);
     const pagesDir = path.join(rootDir, '/pages');
     const generatedJs = path.join(pagesDir, 'generated.js');
-    console.log('making dir', pagesDir)
+    console.log('making dir', pagesDir, process.env.DIAM_KEY);
     mkdirp.sync(pagesDir);
     fs.writeFileSync(generatedJs, `
 export default function Diamond() {
   return (
     <h1>We have generated this!</h1>
+    <h2>Key: ${process.env.DIAM_KEY}</h2>
+    <p>
+      ${process.env.DIAM_KEY ? `We have a compiled system!` : 'Onboarding, please give us a key!'}
+    </p>
   )
 }
 `);
