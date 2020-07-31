@@ -20,7 +20,7 @@ program
     const pagesDir = path.join(rootDir, '/pages');
     const packageJson = path.join(rootDir, 'package.json');
     const indexJs = path.join(pagesDir, 'index.js');
-    console.log('making dir', pagesDir, process.env.DIAM_KEY);
+    console.log('making dir', pagesDir, process.env);
     mkdirp.sync(pagesDir);
     console.log('writing pkg', packageJson);
     fs.writeFileSync(packageJson, `{
