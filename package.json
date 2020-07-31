@@ -1,6 +1,6 @@
 {
   "name": "@diam/cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Diamond CMS CLI for setting up and installing the CMS server and keeping it up to date.",
   "main": "index.js",
   "scripts": {
