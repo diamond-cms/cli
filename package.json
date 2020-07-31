@@ -27,10 +27,9 @@
     "url": "https://github.com/diamond-cms/cms-cli/issues"
   },
   "homepage": "https://github.com/diamond-cms/cms-cli#readme",
-  "devDependencies": {
-    "commander": "^6.0.0"
-  },
+  "devDependencies": {},
   "dependencies": {
+    "commander": "^6.0.0",
     "mkdirp": "^1.0.4"
   }
 }
