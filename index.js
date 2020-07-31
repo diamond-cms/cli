@@ -5,6 +5,7 @@ const program = new Command();
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
+const mkdirp = require('mkdirp');
 const pkg = require('./package.json');
 
 
@@ -19,7 +20,7 @@ program
     const pagesDir = path.join(rootDir, '/pages');
     const generatedJs = path.join(pagesDir, 'generated.js');
     console.log('making dir', pagesDir)
-    fs.mkdirSync(pagesDir);
+    mkdirp.sync(pagesDir);
     fs.writeFileSync(generatedJs, `
 export default function Diamond() {
   return (
