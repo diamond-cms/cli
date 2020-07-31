@@ -31,7 +31,7 @@ program
   },
   "scripts": {
     "dev": "next",
-    "build": "yarn && next build",
+    "build": "yarn",
     "start": "next start"
   }
 }
